@@ -71,13 +71,14 @@ bool isSorted(const T list[], int size)
  }
 	
  }
+        //push on to the stack
  void push_back(T element)
  {
  ensureCapacity();
  elements[nums] = element;
  nums++;
  }
- 
+ //pop off of the stack
  void pop_back()
  {
  return elements[nums-1];
@@ -173,7 +174,7 @@ public:
             balance -= amount;
     }
 };
-
+//create class called account to keep track of withdrawl and deposit
 class Account
 {
 private:
@@ -239,7 +240,7 @@ public:
     {
         balance -= amount;
         numOfTransactions++;
-        transactions[numOfTransactions] = Transaction('W', amount, balance, "Withdrawel");
+        transactions[numOfTransactions] = Transaction('W', amount, balance, "Withdrawl");
     }
     void deposit(double amount)
     {
@@ -294,7 +295,9 @@ int main() {
     cout << endl;
     
     //Problem 12.25
+    //account of george, id number, balcance and interest rate
     Account Acc1("George", 1122, 1000, 1.5);
+    //be able to deposit or withdraw money
     Acc1.deposit(30);
     Acc1.deposit(40);
     Acc1.deposit(50);
